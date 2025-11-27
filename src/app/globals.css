@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: oklch(var(--background));
+  --color-foreground: oklch(var(--foreground));
+  --color-card: oklch(var(--card));
+  --color-card-foreground: oklch(var(--card-foreground));
+  --color-popover: oklch(var(--popover));
+  --color-popover-foreground: oklch(var(--popover-foreground));
+  --color-primary: oklch(var(--primary));
+  --color-primary-foreground: oklch(var(--primary-foreground));
+  --color-secondary: oklch(var(--secondary));
+  --color-secondary-foreground: oklch(var(--secondary-foreground));
+  --color-muted: oklch(var(--muted));
+  --color-muted-foreground: oklch(var(--muted-foreground));
+  --color-accent: oklch(var(--accent));
+  --color-accent-foreground: oklch(var(--accent-foreground));
+  --color-destructive: oklch(var(--destructive));
+  --color-destructive-foreground: oklch(var(--destructive-foreground));
+  --color-border: oklch(var(--border));
+  --color-input: oklch(var(--input));
+  --color-ring: oklch(var(--ring));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+:root {
+  --background: 1 0 0;
+  --foreground: 0.145 0 0;
+  --card: 1 0 0;
+  --card-foreground: 0.145 0 0;
+  --popover: 1 0 0;
+  --popover-foreground: 0.145 0 0;
+  --primary: 0.467 0.15 163;
+  --primary-foreground: 0.985 0 0;
+  --secondary: 0.97 0 0;
+  --secondary-foreground: 0.205 0 0;
+  --muted: 0.97 0 0;
+  --muted-foreground: 0.556 0 0;
+  --accent: 0.97 0 0;
+  --accent-foreground: 0.205 0 0;
+  --destructive: 0.577 0.245 27.325;
+  --destructive-foreground: 0.985 0 0;
+  --border: 0.922 0 0;
+  --input: 0.922 0 0;
+  --ring: 0.467 0.15 163;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0.145 0 0;
+  --foreground: 0.985 0 0;
+  --card: 0.145 0 0;
+  --card-foreground: 0.985 0 0;
+  --popover: 0.145 0 0;
+  --popover-foreground: 0.985 0 0;
+  --primary: 0.567 0.15 163;
+  --primary-foreground: 0.145 0 0;
+  --secondary: 0.269 0 0;
+  --secondary-foreground: 0.985 0 0;
+  --muted: 0.269 0 0;
+  --muted-foreground: 0.708 0 0;
+  --accent: 0.269 0 0;
+  --accent-foreground: 0.985 0 0;
+  --destructive: 0.577 0.245 27.325;
+  --destructive-foreground: 0.985 0 0;
+  --border: 0.269 0 0;
+  --input: 0.269 0 0;
+  --ring: 0.567 0.15 163;
+}
+
+body {
+  background: oklch(var(--background));
+  color: oklch(var(--foreground));
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
