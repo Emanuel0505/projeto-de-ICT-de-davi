@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { SlideLayout, SlideContainer, SlideHeader } from "./SlideLayout"
 import { brazilGoals, brazilEnergySources } from "@/data/slides-data"
+import { Leaf, Wind, Zap } from "@/components/icons"
 
 export function BrazilSlide() {
   return (
@@ -48,7 +49,11 @@ export function BrazilSlide() {
         <div className="grid md:grid-cols-3 gap-4">
           {brazilEnergySources.map((source) => (
             <div key={source.title} className="text-center p-4 bg-black/40 rounded-xl border border-[#74C365]/20">
-              <div className="text-3xl mb-2">{source.emoji}</div>
+              <div className="text-3xl mb-2">
+                {source.icon === "leaf" && <Leaf size={36} />}
+                {source.icon === "wind" && <Wind size={36} />}
+                {source.icon === "zap" && <Zap size={36} />}
+              </div>
               <p className="text-[#DBE64C] font-semibold">{source.title}</p>
               <p className="text-sm text-white/90">{source.subtitle}</p>
             </div>

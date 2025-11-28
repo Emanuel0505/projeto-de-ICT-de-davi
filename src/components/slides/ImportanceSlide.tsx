@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SlideLayout, SlideContainer, SlideHeader } from "./SlideLayout"
 import { importanceItems } from "@/data/slides-data"
+import { Zap, Target, Globe } from "@/components/icons"
 
 export function ImportanceSlide() {
   return (
@@ -19,7 +20,11 @@ export function ImportanceSlide() {
               className="bg-black/50 border-[#74C365]/30 text-white backdrop-blur-sm"
             >
               <CardHeader>
-                <div className="text-3xl mb-2">{item.emoji}</div>
+                <div className="text-3xl mb-2">
+                  {item.icon === "zap" && <Zap size={36} />}
+                  {item.icon === "target" && <Target size={36} />}
+                  {item.icon === "globe" && <Globe size={36} />}
+                </div>
                 <CardTitle className="text-xl text-[#74C365]">{item.title}</CardTitle>
               </CardHeader>
               <CardContent className="text-white">

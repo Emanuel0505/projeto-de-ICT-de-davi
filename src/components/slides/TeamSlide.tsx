@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Users, Wind, Zap, Leaf, Globe, Target, Book } from "@/components/icons"
+import type { ReactNode } from "react"
 import { SlideLayout, SlideContainer } from "./SlideLayout"
 import { teamMembers } from "@/data/slides-data"
 
@@ -30,14 +31,20 @@ export function TeamSlide() {
                 <div
                   className={`w-16 h-16 mx-auto ${member.bgColor} rounded-full flex items-center justify-center text-2xl mb-2`}
                 >
-                  {member.icon === "users" && <Users />}
-                  {member.icon === "wind" && <Wind />}
-                  {member.icon === "zap" && <Zap />}
-                  {member.icon === "leaf" && <Leaf />}
-                  {member.icon === "globe" && <Globe />}
-                  {member.icon === "target" && <Target />}
-                  {member.icon === "book" && <Book />}
-                  {!member.icon && member.emoji}
+                  {
+                    (() => {
+                      const iconMap: Record<string, ReactNode> = {
+                        users: <Users />,
+                        wind: <Wind />,
+                        zap: <Zap />,
+                        leaf: <Leaf />,
+                        globe: <Globe />,
+                        target: <Target />,
+                        book: <Book />,
+                      }
+                      return iconMap[String(member.icon)] ?? (member as any).emoji
+                    })()
+                  }
                 </div>
                 <CardTitle className={`text-lg ${member.textColor}`}>
                   {member.name}

@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge"
-import { Book } from "@/components/icons"
+import { Book, Leaf, Wind, Zap } from "@/components/icons"
 import { SlideLayout, SlideContainer } from "./SlideLayout"
 import { renewableTypes } from "@/data/slides-data"
 
@@ -48,7 +48,12 @@ export function ConclusionSlide() {
               variant="outline"
               className={`text-lg px-4 py-2 ${type.borderColor} ${type.textColor}`}
             >
-              {type.emoji} {type.name}
+              <span className="inline-flex items-center gap-2">
+                {type.icon === "leaf" && <Leaf size={18} />}
+                {type.icon === "wind" && <Wind size={18} />}
+                {type.icon === "zap" && <Zap size={18} />}
+                <span>{type.name}</span>
+              </span>
             </Badge>
           ))}
         </div>

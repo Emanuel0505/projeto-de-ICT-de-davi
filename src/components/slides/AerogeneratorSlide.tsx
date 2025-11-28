@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SlideLayout, SlideContainer, SlideHeader } from "./SlideLayout"
 import { aerogeneratorParts } from "@/data/slides-data"
+import { Wind, Zap, Users } from "@/components/icons"
 
 export function AerogeneratorSlide() {
   return (
@@ -20,7 +21,11 @@ export function AerogeneratorSlide() {
               className="bg-black/50 border-[#74C365]/30 text-white backdrop-blur-sm"
             >
               <CardHeader className="text-center">
-                <div className="text-4xl mb-2">{part.emoji}</div>
+                <div className="text-4xl mb-2">
+                  {part.icon === "wind" && <Wind size={48} />}
+                  {part.icon === "zap" && <Zap size={48} />}
+                  {part.icon === "users" && <Users size={48} />}
+                </div>
                 <CardTitle className="text-lg text-[#74C365]">{part.title}</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-white text-sm">
