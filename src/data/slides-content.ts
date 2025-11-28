@@ -761,7 +761,7 @@ export const slidesContent: SlideContent[] = [
       { name: "Igor Daniel Meneses Fonseca", role: "Banner e Maquete", icon: "users", image: "/componentes do Grupo/igor.png" },
       { name: "Senildo Edson da Silva Junior", role: "Maquete", icon: "users", image: "/componentes do Grupo/senildo.png" },
       { name: "Luis Eduardo", role: "Apresentação e Pesquisa", icon: "users", image: "/componentes do Grupo/luis eduardo.jpeg" },
-      { name: "Ellen", role: "Participante", icon: "users", image: "/componentes do Grupo/ellen.jpeg" }
+      { name: "Ellen", role: "maquete e Apresentação", icon: "users", image: "/componentes do Grupo/ellen.jpeg" }
     ],
     footer: {
       lines: ["ICT – Introdução à Ciência e Tecnologia"],
