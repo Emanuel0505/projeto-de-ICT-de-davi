@@ -757,7 +757,7 @@ export const slidesContent: SlideContent[] = [
       { name: "Luiz Guilherme Marinho Da Cunha", role: "Maquete", emoji: "🔧", image: "/componentes do Grupo/luiz.png" },
       { name: "Igor Daniel Meneses Fonseca", role: "Banner e Maquete", emoji: "🛠️", image: "/componentes do Grupo/igor.png" },
       { name: "Senildo Edson da Silva Junior", role: "Maquete", emoji: "⚡", image: "/componentes do Grupo/senildo.png" },
-      { name: "Novo Participante", role: "Participante", emoji: "👋", image: "/componentes do Grupo/novo_participante.jpeg" }
+      { name: "Luis Eduardo", role: "Apresentação e Pesquisa", emoji: "�", image: "/componentes do Grupo/luis eduardo.jpeg" }
     ],
     footer: {
       lines: ["ICT – Introdução à Ciência e Tecnologia"],
